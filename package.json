@@ -1,0 +1,28 @@
+{
+  "name": "selenium-automation-testing",
+  "version": "1.0.0",
+  "description": "Simple application for automated testing with selenium wrb driver and nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muhaimenul/selenium-automation-testing.git"
+  },
+  "keywords": [
+    "Automated",
+    "Testing",
+    "Selenium",
+    "NodeJS"
+  ],
+  "author": "muhaimenul",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/muhaimenul/selenium-automation-testing/issues"
+  },
+  "homepage": "https://github.com/muhaimenul/selenium-automation-testing#readme",
+  "dependencies": {
+    "selenium-webdriver": "^4.0.0-alpha.1"
+  }
+}
