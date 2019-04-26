@@ -38,7 +38,7 @@ function searchTextOnGoogle() {
 
     // Setup Input capabilities
     const capabilities = {
-        build: 'NodeJS build', // name of the build
+        build: 'NodeJS Build 1', // name of the build
         name: 'Test 1: LabdaTest Grid', // name of the test
         platform: 'windows 10',
         browserName: 'chrome',
@@ -61,7 +61,7 @@ function searchTextOnGoogle() {
 
     // navigate to a url, search for a text and get title of page
     driver.get('https://www.google.com/ncr').then(function() {
-        driver.findElement(webdriver.By.name('q')).sendKeys('LambdaTest\n').then(function() {
+        driver.findElement(webdriver.By.name('q')).sendKeys('muhaimenul larasearch\n').then(function() {
             driver.getTitle().then(function(title) {
                 setTimeout(function() {
                     console.log(title);
