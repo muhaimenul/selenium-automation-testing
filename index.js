@@ -11,6 +11,12 @@
 const webdriver = require('selenium-webdriver');
 
 /*
+    dotenv setup to read .env 
+*/
+const dotenv = require('dotenv');
+dotenv.config();
+
+/*
     Setup remote driver
     Params
     ----------
@@ -26,27 +32,27 @@ const USERNAME = process.env.LT_USERNAME;
 const KEY = process.env.LT_ACCESS_TOKEN;
 
 // gridUrl: gridUrl can be found at automation dashboard
-const GRID_HOST = 'hub.lambdatest.com/wd/hub';
+const GRID_HOST = process.env.GRID_HOST;
 
 function searchTextOnGoogle() {
 
     // Setup Input capabilities
     const capabilities = {
+        build: 'NodeJS build', // name of the build
+        name: 'Test 1: LabdaTest Grid', // name of the test
         platform: 'windows 10',
         browserName: 'chrome',
-        version: '67.0',
+        version: '72.0',
         resolution: '1280x800',
         network: true,
         visual: true,
         console: true,
-        video: true,
-        name: 'Test 1', // name of the test
-        build: 'NodeJS build' // name of the build
+        video: true
     }
 
     // URL: https://{username}:{accessToken}@beta-hub.lambdatest.com/wd/hub
     const gridUrl = 'https://' + USERNAME + ':' + KEY + '@' + GRID_HOST;
-
+    console.log('App started...');
     // setup and build selenium driver object 
     const driver = new webdriver.Builder()
         .usingServer(gridUrl)
