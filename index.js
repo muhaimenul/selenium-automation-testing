@@ -11,10 +11,9 @@
 const webdriver = require('selenium-webdriver');
 
 /*
-    dotenv setup to read .env 
+    getting credentials from config 
 */
-const dotenv = require('dotenv');
-dotenv.config();
+const { username, accessToken, gridHost } = require('./config');
 
 /*
     Setup remote driver
@@ -26,13 +25,13 @@ dotenv.config();
 */
 
 // username: Username can be found at automation dashboard
-const USERNAME = process.env.LT_USERNAME;
+const USERNAME = username;
 
 // AccessKey:  AccessKey can be generated from automation dashboard or profile section
-const KEY = process.env.LT_ACCESS_TOKEN;
+const KEY = accessToken;
 
 // gridUrl: gridUrl can be found at automation dashboard
-const GRID_HOST = process.env.GRID_HOST;
+const GRID_HOST = gridHost;
 
 function searchTextOnGoogle() {
 
